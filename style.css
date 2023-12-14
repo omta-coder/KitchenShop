@@ -1,0 +1,512 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: gilroy;
+    outline: none;
+    text-decoration: none;
+    border: none;
+    color: #000;
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    /* overflow-x: hidden;
+    scroll-padding-top: 6.5rem;
+    scroll-behavior: smooth; */
+}
+#nav{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 .5rem 1rem rgb(0,0,0,.1);
+    padding: 0 3rem;
+    position: relative;
+    background-color: #fff;
+}
+#nav.active{
+    position: fixed;
+    top: 0;left: 0;right: 0;
+    z-index: 9999;
+}
+#nav #menubar{
+    display: none;
+}
+#nav #navbar a{
+    margin-right: 2rem; 
+    font-size: 1.4rem;  
+}
+#nav #icons a{
+    margin-right: 1.2rem; 
+    font-size: 1.5rem; 
+}
+#page1{
+    height: calc(100% - 100px);
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+#page1::-webkit-scrollbar{
+    display: none;
+}
+#page1 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#page1 #page1-box{
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+}
+#page2{
+    height:100%;
+    width: 100%;
+    /* background-color: blue; */
+}
+#page2 #heading{
+    text-align: center;
+    padding: 2rem;
+}
+#page2 #heading h1{
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+}
+#page2 #heading h1 span{
+    color: rgb(255, 123, 0);
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+#page2 #center{
+    padding: 2rem 3rem;
+}
+#page2 #center #center-box{
+    height: 200px;
+    width: 300px;
+    background-color: #a5a4a43b;
+    display: inline-block;
+    margin-right: .8rem;
+    margin-bottom: 1.3rem;
+    position: relative;
+    transition: all ease .5s;
+}
+#page2 #center #center-box #txt{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 1.3rem;
+}
+#page2 #center #center-box:hover{
+    background-color: rgb(3, 46, 44);
+    color: #fff;
+}
+#page2 #center #center-box #txt h2{
+    font-size: 1.5rem;
+    transition: all ease .5s;
+    opacity: .7;
+}
+#page2 #center #center-box:hover h2{
+    color: #fff;
+}
+#page3{
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+#page3-left{
+    height: 100%;
+    width: 50%;
+}
+#page3-left img{
+    height: 95%;
+    width: 100%;
+    object-fit: cover;
+}
+#page3-right{
+    height: 100%;
+    width: 50%;
+    padding: 1rem;
+}
+#page3-right h1{
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    margin-bottom: 1rem;
+}
+#page3-right h1 span{
+    color: rgb(255, 123, 0);
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+#page3-right #brand{
+    height: 130px;
+    width: 300px;
+    border: .1rem solid #bbb9b96b;
+    display: inline-block;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    position: relative;
+    transition: all ease .5s;
+}
+#page3-right #brand:hover{
+    border: .1rem solid #888;
+}
+#page3-right #brand img{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+}
+#page3-right button{
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    background-color: orangered;
+    color: #fff;
+    transition: all ease .5s;
+    cursor: pointer;
+}
+#page3-right button:hover{
+    border: .1rem solid orangered;
+    background-color: transparent;
+    color: orangered;
+}
+/*  */
+#page4{
+    height: 70%;
+    width: 100%;
+    background-color: rgba(181, 196, 202, 0.288);
+    text-align: center;
+    padding: 5rem 0;
+    /* background-image: url(./images/icon/rate-star.png);
+    background-position: 0 0;
+    background-repeat: repeat-x;
+    height: 13px; */
+}
+#page4 h1{
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    margin-bottom: 1rem;
+    margin-bottom: 3rem;
+}
+#page4 h1 span{
+    color: rgb(255, 123, 0);
+    font-size: 1.6rem;
+}
+#page4 img{
+    width: 600px;
+    margin-bottom: 2rem;
+}
+#page4 p{
+    font-size: 1.3rem;
+}
+#page5{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(181, 196, 202, 0.288);
+    padding: 0 2rem;
+    text-align: center; 
+}
+#page5 h1{
+    font-size: 3.3rem;
+    line-height: 2.6rem;
+    margin-bottom: 1.4rem;
+}
+#page5 h1 span{
+    color: rgb(255, 123, 0);
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+#page5 #pg5{
+    display: flex;
+}
+#page5 #pg-box{
+    height: 440px;
+    width: 320px;
+    border: .1rem solid silver;
+    margin-right: 1rem;
+    transition: all ease .5s;
+}
+#page5 #pg-box:hover{
+    border: .1rem solid #555;
+}
+#page5 #box-top{
+    height: 70%;
+    width: 100%;
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+#page5 #box-top #line{
+    position: absolute;
+    bottom: -30%;
+    left: 0;
+    right: 0;
+    transition: all ease .5s;
+}
+#page5 #pg-box:hover #line{
+    bottom: 0;
+}
+#page5 #box-top #line a{
+    padding: 1rem ;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: all ease 1s;
+}
+#page5 #box-top #line a:hover{
+    background-color: rgba(4, 82, 4, 0.993);
+    color: #fff;
+}
+#page5 #box-top img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all ease .5s;
+}
+#page5 #box-top:hover img{
+    scale: 1.2;
+}
+#page5 #box-bottom{
+    height: 30%;
+    width: 100%;
+    background-color: #fff;
+    padding: 1.3rem;
+}
+#page5 #box-bottom .stars i{
+    padding: .4rem .1rem;
+    font-size: 1.3rem;
+    color: orange;
+}
+#page5 #box-bottom h3{
+    font-size: 1.1rem;
+    padding: .4rem;
+}
+#page5 #box-bottom a{
+    font-size: 1.2rem;
+    color: #234567;
+}
+#page5 button{
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    transition: all ease .5s;
+    background-color: orangered;
+    color: #fff;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+#page5 button:hover{
+    border: .1rem solid orangered;
+    color: orangered;
+    background-color: transparent;
+}
+#page6{
+    height: 60%;
+    width: 100%;
+    display: flex;
+    padding: 2.4rem;
+    gap: 1rem;
+}
+#page6-box{
+    height: 300px;
+    width: 630px;
+    position: relative;
+    overflow: hidden;
+}
+#page6-box #txt{
+    position: absolute;
+    margin:4rem 2rem;
+    z-index: 999;
+}
+#page6-box #txt h1{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+#page6-box #txt p{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+#page6-box #txt button{
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    transition: all ease .5s;
+    background-color: orangered;
+    color: #fff;
+    cursor: pointer;
+}
+#page6-box #txt button:hover{
+    border: .1rem solid orangered;
+    color: orangered;
+    background-color: transparent;
+}
+#page6-box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all ease .5s;
+}
+#page6-box:hover img{
+    scale: 1.2;
+}
+#page7{
+    height: 60%;
+    width: 100%;
+    background-color: #1d4e44;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#page7 h1{
+    font-size: 3.3rem;
+    line-height: 2.6rem;
+    margin-bottom: 1.4rem;
+    color: #fff;
+}
+#page7 h1 span{
+    color: rgb(255, 123, 0);
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+#page7 p{
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: .6rem;
+}
+#page7 input{
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    width: 20rem;
+}
+#page7 button{
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    transition: all ease .5s;
+    background-color: orangered;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 5rem;
+}
+/*  */
+#page7 a{
+    color: #fff;
+    font-size: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:600px) {
+    #nav img{
+        display: none;
+    }
+    #nav #menubar{
+        display: initial;
+        font-size: 3rem;
+    }
+    #nav #navbar{
+        position: absolute;
+         top: 100%;
+         left: 0;
+         right: 0;
+         padding: 1rem 2rem;
+         background-color: #234567;
+         display: none;
+    }
+    #nav #navbar.active{
+        display: initial;
+    }
+    #nav #navbar a{
+        font-size: 2.5rem;
+        display: block;
+        text-align: center;
+        background: #fff;
+        padding: 1rem;
+        margin: 1.5rem 0;
+    }
+    #nav #icons a{
+        font-size: 2.3rem;
+    }
+    #page1{
+        height: 50%;
+       flex-wrap: wrap;
+    }
+    #page1 img{
+        display: none;
+    }
+    #page1{
+        background-image: url(https://bw-medxtore-demo14.bzotech.com/wp-content/uploads/2023/08//product-cool-5-460x460.png);
+        background-size: cover;
+        background-position: center;
+    }
+    #page2 #center #center-box{
+        /* width: 85vw; */
+        height: 200px;
+        width: 236px;
+    }
+    #page3{
+        flex-direction: column;
+        text-align: center;
+    }
+    #page3-right h1{
+        text-align: center;
+    }
+    #page3-left{
+        height: 50%;
+        width: 100%;
+    }
+    #page3-right{
+        height: 50%;
+        width: 100%;
+    }
+    #page3-right #brand{
+        height: 100px;
+        width: 250px;
+    }
+    #page4{
+        height: 40%;
+        padding:  2rem;
+    }
+    #page4 img{
+        width: 500px;
+    }
+    #page4 p{
+        width: 95%;
+    }
+    #page5 #pg5{
+        flex-direction: column;
+        gap: 1rem;
+    }
+    #page5 #pg-box{
+        width: 90vw;
+        height: 210px;
+        overflow: hidden;
+    }
+    #page5 #box-top img{
+        width: 100px;
+        height: 160px;
+        object-fit: cover;
+    }
+    #page6{
+        flex-direction: column;
+    }
+    #page6-box{
+        width: 90vw;
+    }
+    #page7{
+        height: 40%;
+    }
+    
+}
